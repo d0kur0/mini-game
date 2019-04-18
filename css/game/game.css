@@ -1,0 +1,12 @@
+@import "game__field.css";
+@import "game__player.css";
+@import "game__scores.css";
+
+.game {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}

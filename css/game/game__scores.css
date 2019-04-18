@@ -1,0 +1,15 @@
+.game__scores {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.game__scores--count {
+    position: relative;
+}
+
+.game__scores--count::before {
+    margin-left: 5px;
+    position: absolute;
+    content: attr(data-count);
+}
