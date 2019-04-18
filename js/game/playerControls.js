@@ -5,14 +5,14 @@ export default function playerControls () {
     window.addEventListener('keydown', (event) => {
         const player = document.querySelector('.game__player');
         const playerRect = player.getBoundingClientRect();
-        const stepSizes = 10;
+        const stepSize = 10;
 
         let currentX = player.style.left.match(/\d+/g);
         let currentY = player.style.top.match(/\d+/g);
 
         let currentPosition = {
-            x: parseInt(currentX ? currentX : 0),
-            y: parseInt(currentY ? currentY : 0)
+            x: parseInt(currentX === null ? 0 : currentX),
+            y: parseInt(currentY === null ? 0 : currentY)
         };
 
         let newPosition = {
@@ -20,40 +20,60 @@ export default function playerControls () {
             y: currentPosition.y
         };
 
+        console.log(newPosition);
+
         switch (event.which) {
             // left
             case 37:
-                newPosition.x -= stepSizes;
-                console.log('left');
+                if (!currentPosition.x) {
+                    return;
+                }
+
+                newPosition.x -= stepSize;
                 break;
 
             // right
             case 39:
-                newPosition.x += stepSizes;
-                console.log('right');
+                if ((newPosition.x + playerRect.width) + stepSize >= state.fieldRect.width) {
+                    let outside = state.fieldRect.width - (newPosition.x + stepSize);
+
+                    if (outside > 0) {
+                        newPosition.x = state.fieldRect.width - playerRect.width;
+                    } else {
+                        return;
+                    }
+                }
+                else
+                {
+                    newPosition.x += stepSize;
+                }
                 break;
 
             // top
             case 38:
-                newPosition.y -= stepSizes;
-                console.log('top');
+                if (!currentPosition.y) {
+                    return;
+                }
+
+                newPosition.y -= stepSize;
                 break;
 
             // bottom
             case 40:
-                newPosition.y += stepSizes;
-                console.log('bottom');
+                if ((newPosition.y + playerRect.height) + stepSize >= state.fieldRect.height) {
+                    let outside = state.fieldRect.height - (newPosition.y + stepSize);
+
+                    if (outside > 0) {
+                        newPosition.y = state.fieldRect.height - playerRect.height;
+                    } else {
+                        return;
+                    }
+                }
+                else
+                {
+                    newPosition.y += stepSize;
+                }
                 break;
-        }
-
-        const restX = (player.width + newPosition.x) - state.fieldRect.width;
-        const restY = (player.height + newPosition.y) - state.fieldRect.height;
-
-        const isYOutside = (newPosition.y + playerRect.height) > state.fieldRect.height || newPosition.y < 0;
-        const isXOutside = (newPosition.x + playerRect.width) > state.fieldRect.width || newPosition.x < 0;
-
-        if (isXOutside || isYOutside) {
-            return;
         }
 
         player.style.left = newPosition.x + 'px';

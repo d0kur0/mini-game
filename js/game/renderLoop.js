@@ -17,5 +17,4 @@ export default function renderLoop () {
     };
 
     playerControls();
-    console.log('render loop');
 };
