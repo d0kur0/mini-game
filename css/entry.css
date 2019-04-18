@@ -1,0 +1,9 @@
+@import "game/game.css";
+
+body {
+    margin: auto;
+    font-family: sans-serif;
+    background-color: #ddd;
+    color: #555;
+    height: 100vh;
+}
