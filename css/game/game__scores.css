@@ -2,6 +2,8 @@
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 25px;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(88, 88, 88, 0.5);
+    color: #c3c3c3;
 }
 
 .game__scores--count {
