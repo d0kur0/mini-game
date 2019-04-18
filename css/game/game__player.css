@@ -1,7 +1,8 @@
 .game__player {
     position: absolute;
     transition: 0.2s;
-    width: 70px;
-    height: 70px;
-    background-color: #2c3e50;
+    width: 50px;
+    height: 50px;
+    background-image: url('/image/player.gif');
+    background-size: cover;
 }
