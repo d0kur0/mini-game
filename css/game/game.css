@@ -4,7 +4,6 @@
 @import "game__keys.css";
 
 .game {
-    max-width: 1024px;
     margin: auto;
     display: flex;
     flex-direction: column;
