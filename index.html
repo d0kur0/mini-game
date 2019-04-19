@@ -4,18 +4,30 @@
     <title>Mini CSS game</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/entry.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
     <div class="game">
-        <div class="game__scores">
-            You scores: <span class="game__scores--count">0</span>
-        </div>
-
-        <div class="game__field-container">
-            <div class="game__field">
-                <div class="game__player"></div>
+        <header class="game-header">
+            <div class="game-header-left">
+                <div class="game-scores">
+                    You scores: <span class="game-scores-count">0</span>
+                </div>
             </div>
-        </div>
+
+            <div class="game-header-right">
+                <button class="game-button">How to play</button>
+                <button class="game-button">Records</button>
+            </div>
+        </header>
+
+        <main class="game-field-container">
+            <div class="game-field">
+                <div class="game-player" state="stop"></div>
+
+                <div class="game-field-elem-rabbit"></div>
+            </div>
+        </main>
     </div>
 
     <script type="module" src="js/entry.js"></script>
