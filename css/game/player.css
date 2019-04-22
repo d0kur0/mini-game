@@ -1,6 +1,6 @@
 .game-player {
     position: absolute;
-    bottom: 50px;
+    top: 80%;
     left: 50%;
     width: 100px;
     height: 120px;
@@ -20,4 +20,9 @@
 .game-player[state="run-left"] {
     transform: scale(-1, 1);
     background-image: url('/assets/player-run.gif');
+}
+
+
+.game-player[state="jump"] {
+    background-image: url('/assets/player-jump.gif');
 }

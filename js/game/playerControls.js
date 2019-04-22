@@ -16,7 +16,7 @@ export default function playerControls () {
         events.moveStart('right');
         break;
       case 38:
-        // ...
+        events.jump();
         break
       case 40:
         // ...
@@ -24,8 +24,21 @@ export default function playerControls () {
     }
   });
 
-  window.addEventListener('keyup', () => {
-    events.moveStop();
+  window.addEventListener('keyup', event => {
+    switch (event.which) {
+      case 37:
+        events.moveStop();
+        break;
+      case 39:
+        events.moveStop();
+        break;
+      case 38:
+        // ...
+        break
+      case 40:
+        // ...
+        break;
+    }
   });
 
 }
