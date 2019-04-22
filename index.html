@@ -3,27 +3,31 @@
 <head>
     <title>Mini CSS game</title>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="css/entry.css">
 </head>
 <body>
     <div class="game">
-        <div class="game__scores">
-            You scores: <span class="game__scores--count" data-count="0"></span>
-        </div>
+        <header class="game-header">
+            <div class="game-header-left">
+                <div class="game-scores">
+                    You scores: <span class="game-scores-count">0</span>
+                </div>
+            </div>
 
-        <div class="game__field">
-            <div class="game__player"></div>
-        </div>
+            <div class="game-header-right">
+                <button class="game-button">How to play</button>
+                <button class="game-button">Records</button>
+            </div>
+        </header>
 
-        <div class="game__keys">
-            <h3>Controls</h3>
+        <main class="game-field-container">
+            <div class="game-field">
+                <div class="game-player" state="stop"></div>
 
-            Move
-            <span class="game__keys--key">🠐</span>
-            <span class="game__keys--key">🠒</span>
-            <span class="game__keys--key">🠑</span>
-            <span class="game__keys--key">🠓</span>
-        </div>
+                <div class="game-elem-rabbit"></div>
+            </div>
+        </main>
     </div>
 
     <script type="module" src="js/entry.js"></script>

@@ -1,0 +1,24 @@
+.game-player {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 100px;
+    height: 120px;
+    background-size: cover;
+    z-index: 1;
+    transition: background 0.1s;
+    border: 1px solid red;
+}
+
+.game-player[state="stop"] {
+    background-image: url('/assets/player-stop.gif');
+}
+
+.game-player[state="run-right"] {
+    background-image: url('/assets/player-run.gif');
+}
+
+.game-player[state="run-left"] {
+    transform: scale(-1, 1);
+    background-image: url('/assets/player-run.gif');
+}

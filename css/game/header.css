@@ -1,0 +1,14 @@
+.game-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.game-header-left {
+    margin-right: auto;
+}
+
+.game-header-right {
+    margin-left: auto;
+}

@@ -1,9 +1,10 @@
-@import "game/game.css";
+@import "game/index.css";
 
 body {
     margin: auto;
-    font-family: sans-serif;
     background-color: #ddd;
-    color: #555;
+    color: #2d2d2d;
     height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100%;
 }
