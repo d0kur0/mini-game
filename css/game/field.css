@@ -1,0 +1,9 @@
+.game-field-container {
+    height: calc(100vh - 80px);
+}
+
+.game-field {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}

@@ -1,0 +1,16 @@
+.game-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+
+}
+
+.game-header-left {
+    margin-right: auto;
+}
+
+.game-header-right {
+    margin-left: auto;
+}
