@@ -7,7 +7,7 @@
 
 .game {
     min-height: 100vh;
-    background-image: url('/assets/fieldbackground.jpg');
+    background-image: url('/assets/locations/horror-forest.gif');
     background-size: cover;
     background-position: bottom;
 }
