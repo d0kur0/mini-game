@@ -1,9 +1,129 @@
-@import "game/game.css";
-
 body {
     margin: auto;
-    font-family: sans-serif;
     background-color: #ddd;
-    color: #555;
+    color: #2d2d2d;
     height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100%;
+}
+
+.game {
+    min-height: 100vh;
+    background-image: url('../assets/fieldbackground.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.game-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+
+}
+
+.game-header-left {
+    margin-right: auto;
+}
+
+.game-header-right {
+    margin-left: auto;
+}
+
+.game-scores {
+    font-weight: bold;
+    color: #a74c56;
+}
+
+.game-scores-count {
+
+}
+
+.game-button {
+    font: inherit;
+    font-size: 0.6em;
+    border-image-slice: 2;
+    border-image-width: 3;
+    border-image-repeat: stretch;
+    border-image-source: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' %3F%3E%3Csvg version='1.1' width='5' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z' fill='rgb(91, 32, 38)' /%3E%3C/svg%3E");
+    border-image-outset: 2;
+    position: relative;
+    padding: 10px 10px;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #c95173;
+    outline: none;
+    cursor: pointer;
+}
+
+.game-button:hover,
+.game-button:focus,
+.game-button:active {
+    background-color: #c1506c;
+}
+
+.game-button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    box-shadow: inset -4px -4px #aa5055;
+}
+
+.game-button:hover::after,
+.game-button:focus::after {
+    box-shadow: inset -5px -5px #994d4d;
+}
+
+.game-button:active::after {
+    box-shadow: inset 5px 5px #994d4d;
+}
+
+
+.game-field-container {
+    height: calc(100vh - 80px);
+}
+
+.game-field {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.game-field-elem-rabbit {
+    position: absolute;
+    bottom: 50px;
+    left: 90%;
+    width: 70px;
+    height: 85px;
+    background-size: cover;
+    background-image: url('../assets/element-rabbit.gif');
+    z-index: 2;
+}
+
+.game-player {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 100px;
+    height: 120px;
+    background-size: cover;
+    z-index: 1;
+    transition: background 0.1s;
+}
+
+.game-player[state="stop"] {
+    background-image: url('../assets/player-stop.gif');
+}
+
+.game-player[state="run-right"] {
+    background-image: url('../assets/player-run.gif');
+}
+
+.game-player[state="run-left"] {
+    transform: scale(-1, 1);
+    background-image: url('../assets/player-run.gif');
 }
