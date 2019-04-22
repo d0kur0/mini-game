@@ -5,6 +5,6 @@
     width: 70px;
     height: 85px;
     background-size: cover;
-    background-image: url('../assets/element-rabbit.gif');
+    background-image: url('/assets/element-rabbit.gif');
     z-index: 2;
 }
