@@ -36,10 +36,8 @@ export default class controlEvents {
         state.player.setAttribute('state', 'run-right');
         newXPosition += this.moveXStep;
 
-        console.log(state.fieldRect.width, newXPosition, state.player.offsetWidth);
-
-        if (newXPosition > state.fieldRect.width) {
-           newXPosition = state.fieldRect.width - state.player.offsetWidth;
+        if (newXPosition + state.player.offsetWidth > state.field.offsetWidth) {
+           newXPosition = state.field.offsetWidth - state.player.offsetWidth;
         }
       }
 
