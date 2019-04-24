@@ -14,7 +14,11 @@ export default class controlEvents {
   }
 
   __setNewYPosition (y) {
-    state.player.style.top = y + 'px';
+    state.player.style.bottom = y + 'px';
+  }
+
+  __getYPosition () {
+    return state.field.offsetHeight - (state.player.offsetTop + state.player.offsetHeight);
   }
 
   moveStart (direction) {
@@ -68,24 +72,24 @@ export default class controlEvents {
     this.isJump = true;
     state.player.setAttribute('state', 'jump');
 
-    let initialYPosition = state.player.offsetTop;
+    let initialYPosition = this.__getYPosition();
     let jumpTick = 4;
     let frame = 0;
 
     const process = setInterval(() => {
 
-      let currentYPosition = state.player.offsetTop;
+      let currentYPosition = this.__getYPosition();
       let newYPosition = currentYPosition;
 
       frame += jumpTick;
 
       if (frame > 150) {
-        newYPosition += jumpTick;
-      } else {
         newYPosition -= jumpTick;
+      } else {
+        newYPosition += jumpTick;
       }
 
-      if (frame > 150 && newYPosition >  initialYPosition) {
+      if (newYPosition < initialYPosition) {
         this.__setNewYPosition(initialYPosition);
         this.isJump = false;
 
