@@ -1,4 +1,4 @@
-.game-button {
+.ui-button {
     font: inherit;
     background-color: #27433b;
     transition: 0.3s;
@@ -10,12 +10,23 @@
     outline: none;
 }
 
-.game-button:hover,
-.game-button:focus {
+.ui-button:hover,
+.ui-button:focus {
     background-color: #1c362e;
     color: #79b5a2;
 }
 
-.game-button:active {
-    border: 2px solid #132721;
+.ui-button:active {
+   border-color: #132721;
+}
+
+.ui-button-small {
+    font-size: 0.7em;
+    border-width: 1px;
+    padding: 5px 10px;
+}
+
+.ui-button:disabled {
+    opacity: 0.7;
+    cursor: inherit;
 }
