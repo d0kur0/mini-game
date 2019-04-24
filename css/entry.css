@@ -1,4 +1,5 @@
 @import "game/index.css";
+@import "ui/index.css";
 
 body {
     margin: auto;

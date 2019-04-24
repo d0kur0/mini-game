@@ -1,0 +1,21 @@
+.game-button {
+    font: inherit;
+    background-color: #27433b;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border: 2px solid #1e342d;
+    border-radius: 3px;
+    color: #83c3af;
+    cursor: pointer;
+    outline: none;
+}
+
+.game-button:hover,
+.game-button:focus {
+    background-color: #1c362e;
+    color: #79b5a2;
+}
+
+.game-button:active {
+    border: 2px solid #132721;
+}
