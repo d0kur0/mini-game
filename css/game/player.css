@@ -1,6 +1,6 @@
 .game-player {
     position: absolute;
-    top: 80%;
+    bottom: 45px;
     left: 50%;
     width: 100px;
     height: 120px;
