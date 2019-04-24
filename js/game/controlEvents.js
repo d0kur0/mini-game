@@ -9,6 +9,8 @@ export default class controlEvents {
 
   isJump = false;
 
+  isAttack = false;
+
   __setNewXPosition (x) {
     state.player.style.left = x + 'px';
   }
@@ -55,7 +57,7 @@ export default class controlEvents {
 
       this.__setNewXPosition(newXPosition);
 
-    }, 1000 / 60);
+    }, 1000 / 90);
   }
 
   moveStop () {
@@ -106,5 +108,24 @@ export default class controlEvents {
       this.__setNewYPosition(newYPosition);
 
     }, 10);
+  }
+
+  attack (type) {
+    if (this.isAttack) {
+      return;
+    }
+
+    this.isAttack = true;
+    state.player.setAttribute('state', `attack-${type}`);
+
+    setTimeout(() => {
+      if (this.isMove) {
+        state.player.setAttribute('state', this.moveDirection);
+      } else {
+        state.player.setAttribute('state', 'stop');
+      }
+
+      this.isAttack = false;
+    }, 1000);
   }
 }
