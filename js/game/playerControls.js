@@ -8,7 +8,6 @@ export default function playerControls () {
   window.addEventListener('keydown', event => {
 
     switch (event.which) {
-      // left
       case 37:
         events.moveStart('left');
         break;
@@ -17,9 +16,9 @@ export default function playerControls () {
         break;
       case 32:
         events.jump();
-        break
-      case 40:
-        // ...
+        break;
+      case 18:
+        events.attack(3);
         break;
     }
   });
