@@ -15,7 +15,7 @@ export default function playerControls () {
       case 39:
         events.moveStart('right');
         break;
-      case 38:
+      case 32:
         events.jump();
         break
       case 40:
