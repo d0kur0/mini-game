@@ -1,8 +1,6 @@
 @import "header.css";
 @import "field.css";
 @import "player.css";
-@import "buttons.css";
-@import "scores.css";
 @import "element-rabbit.css";
 
 .game {
@@ -10,4 +8,5 @@
     background-image: url('/assets/locations/horror-forest.gif');
     background-size: cover;
     background-position: bottom;
+    position: relative;
 }

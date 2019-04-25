@@ -1,0 +1,32 @@
+.ui-button {
+    font: inherit;
+    background-color: #27433b;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border: 2px solid #1e342d;
+    border-radius: 3px;
+    color: #83c3af;
+    cursor: pointer;
+    outline: none;
+}
+
+.ui-button:hover,
+.ui-button:focus {
+    background-color: #1c362e;
+    color: #79b5a2;
+}
+
+.ui-button:active {
+   border-color: #132721;
+}
+
+.ui-button-small {
+    font-size: 0.7em;
+    border-width: 1px;
+    padding: 5px 10px;
+}
+
+.ui-button:disabled {
+    opacity: 0.7;
+    cursor: inherit;
+}

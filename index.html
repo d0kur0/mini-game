@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="css/entry.css">
 </head>
 <body>
+    <div class="ui-overlay popup-control">
+        <div class="ui-overlay-body">
+            <div class="ui-overlay-header">
+                <div class="ui-overlay-header-left">
+                    <h2>How to play</h2>
+                </div>
+                <div class="ui-overlay-header-rigth">
+                    <button class="ui-button ui-button-small popup-control-close">close</button>
+                </div>
+            </div>
+
+            <div class="overlay-content">
+                <kbd>Space</kbd> - Jump<br>
+                <kbd>Alt GR</kbd> - Attack<br>
+                <kbd>🡐</kbd> - Move Left<br>
+                <kbd>🡒</kbd> - Mve right
+            </div>
+        </div>
+    </div>
+
     <div class="game">
         <header class="game-header">
             <div class="game-header-left">
@@ -16,8 +36,8 @@
             </div>
 
             <div class="game-header-right">
-                <button class="game-button">How to play</button>
-                <button class="game-button">Records</button>
+                <button class="ui-button popup-control-open">How to play</button>
+                <button class="ui-button" disabled="true">Records</button>
             </div>
         </header>
 
