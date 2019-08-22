@@ -12,43 +12,43 @@
 
 .game-player[state="stop"] {
     background-size: 110px 110px;
-    background-image: url('/assets/player-stop.gif');
+    background-image: url('assets/player-stop.gif');
 }
 
 .game-player[state="run-right"] {
-    background-image: url('/assets/player-run.gif');
+    background-image: url('assets/player-run.gif');
 }
 
 .game-player[state="run-left"] {
     transform: scale(-1, 1);
-    background-image: url('/assets/player-run.gif');
+    background-image: url('assets/player-run.gif');
 }
 
 
 .game-player[state="jump"] {
-    background-image: url('/assets/player-jump.gif');
+    background-image: url('assets/player-jump.gif');
 }
 
 .game-player[state="attack-1"] {
-    background-image: url('/assets/player-attack-1.gif');
+    background-image: url('assets/player-attack-1.gif');
 }
 
 .game-player[state="attack-2"] {
-    background-image: url('/assets/player-attack-2.gif');
+    background-image: url('assets/player-attack-2.gif');
 }
 
 .game-player[state="attack-3"] {
-    background-image: url('/assets/player-attack-3.gif');
+    background-image: url('assets/player-attack-3.gif');
 }
 
 .game-player[state="attack-4"] {
-    background-image: url('/assets/player-attack-4.gif');
+    background-image: url('assets/player-attack-4.gif');
 }
 
 .game-player[state="attack-5"] {
-    background-image: url('/assets/player-attack-5.gif');
+    background-image: url('assets/player-attack-5.gif');
 }
 
 .game-player[state="attack-6"] {
-    background-image: url('/assets/player-attack-6.gif');
+    background-image: url('assets/player-attack-6.gif');
 }
