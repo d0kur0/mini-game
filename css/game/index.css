@@ -1,13 +1,12 @@
 @import "header.css";
 @import "field.css";
 @import "player.css";
-@import "buttons.css";
-@import "scores.css";
 @import "element-rabbit.css";
 
 .game {
     min-height: 100vh;
-    background-image: url('/assets/fieldbackground.jpg');
+    background-image: url('../assets/locations/horror-forest.gif');
     background-size: cover;
     background-position: bottom;
+    position: relative;
 }

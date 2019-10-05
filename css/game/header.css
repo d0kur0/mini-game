@@ -2,9 +2,7 @@
     height: 80px;
     display: flex;
     align-items: center;
-    max-width: 1240px;
-    margin: auto;
-
+    padding: 0 2vw;
 }
 
 .game-header-left {
